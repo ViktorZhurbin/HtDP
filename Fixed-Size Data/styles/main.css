@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.625rem);
+    font-size: 19px;
+    box-sizing: border-box;
+}
+
+:root {
+	--color-text: hsl(222deg, 22%, 5%);
+
+	--color-white: hsl(0deg, 0%, 100%);
+
+	--color-bg-night: hsl(210deg, 30%, 8%);
+
+
+	--color-gray-900: hsl(225deg, 25%, 20%);
+	--color-gray-900-night: hsl(210deg, 25%, 88%);
+
+	--color-gray-1000: hsl(225deg, 15%, 15%);
+	--color-gray-1000-night: hsl(210deg, 25%, 96%);
+
+	--color-pre: hsl(0deg 0% 16%);
+	--color-pre-night: white;
+	--color-pre-bg: hsl(225deg 25% 97%);
+	--color-pre-bg-night: hsl(210deg, 30%, 12%);
+
+	--color-code: hsl(220deg 16% 11%);
+	--color-code-night: white;
+	--color-code-bg: hsl(225deg 9% 91%);
+	--color-code-bg-night: hsla(216deg 10% 50% /  0.17);
+
+	--color-primary: hsl(245deg, 100%, 60%);
+	--color-primary-night: hsl(333deg, 100%, 52%);
+	--color-secondary: hsl(333deg, 100%, 45%);
+	--color-secondary-night: hsl(230deg, 100%, 67%);
+	--color-tertiary: hsl(255deg, 85%, 30%);
+	--color-tertiary-night: hsl(53deg 100% 50%);
+
+    --color-link: #0072E5;
+
+    --font-weight-bold: 600;
+    --font-weight-medium: 500;
+    --font-weight-light: 400;
+    --font-family: Roboto, Arial, -apple-system, sans-serif;
+    --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Fira Mono', 'Meslo LG S for Powerline', Inconsolata, 'Droid Sans Mono', monospace;
+}
+
+body {
+    text-align: left;
+	font-family: var(--font-family);
+	color: var(--color-text);
+	background-color: var(--color-white);
+	margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+	padding: 48px 32px;
+    max-width: 686px;
+    margin: 0 auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+blockquote > p {
+	margin: 0;
+}
+
+h1 {
+	margin: 8px 0 16px;
+	line-height: 1.1;
+	color: var(--color-gray-1000);
+}
+.nightMode h1 {
+	color: var(--color-gray-1000-night);
+}
+
+h2, h2 > a {
+    margin-top: 64px;
+    margin-bottom: 16px;
+	color:	var(--color-tertiary);
+}
+.nightMode h2 {
+	color:	var(--color-tertiary-night);
+}
+
+h3, h3 > a {
+    margin-top: 64px;
+    margin-bottom: 12px;
+	color: var(--color-gray-900);
+}
+
+.nightMode h3 {
+	color: var(--color-gray-900-night);
+}
+
+a, .toclink, .techinside {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+}
+
+a:hover, .techoutside:hover, .techinside:hover {
+    text-decoration: underline;
+}
+
+/* aside notes */
+.refcolumn {
+    display: block;
+    padding: 24px 32px;
+    margin: 28px 0 36px;
+    border-left-width: 3px;
+	border-left-style: solid;
+    border-left-color: hsl(230deg, 100%, 67%);
+    border-radius: 6px 6px 6px 3px;
+	background: hsl(210deg, 55%, 92%);
+}
