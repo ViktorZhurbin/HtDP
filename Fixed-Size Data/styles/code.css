@@ -37,8 +37,22 @@ blockquote,
   white-space: normal;
   font-size: 16px;
   line-height: 1.5;
+  color: #2A2A2A;
 
 }
+
+/* :not(table) .RktIn, .RktRdr, .RktPn, .RktMeta,
+.RktMod, .RktKw, .RktVar, .RktSym,
+.RktRes, .RktOut, .RktCmt, .RktVal,
+.RktBlk, .RktErr {
+  color: inherit;
+  font-size: 0.9em;
+  letter-spacing: -0.5px;
+  padding: 4.5px 6px;
+  margin: 1px -1px;
+  background: rgba(115, 125, 140, 0.17);
+  border-radius: 3px;
+} */
 
 /* this selctor grabs the first linked Racket symbol
 in a definition box (i.e., the symbol being defined) */
@@ -131,15 +145,12 @@ span.RktValDef, span.RktStxDef, span.RktSymDef
     color: #444;
 }
 
-
 .RktSym {
-   color: inherit;
+  color: inherit;
 }
 
-
-
 .RktValLink, .RktStxLink, .RktModLink {
-  text-decoration: none;
+    text-decoration: none;
     color: var(--color-link);
     font-size: inherit;
 }
