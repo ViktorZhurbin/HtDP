@@ -104,21 +104,17 @@ body {
 	transition: opacity 0ms ease 0s;
 }
 
-.toc p > .hspace {
-	display: none;
-}
-
 .toc p {
 	margin: 0;
+}
+
+.sub-group {
+	padding-left: 12px;
 }
 
 .content {
 	flex: 1 1 686px;
     max-width: min(686px, 100%);
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
 }
 
 p {
@@ -135,30 +131,25 @@ h1 {
 	line-height: 1.1;
 	color: var(--color-gray-1000);
 }
-.nightMode h1 {
-	color: var(--color-gray-1000-night);
+
+h2, h3, h4 {
+	margin-top: 64px;
+	margin-bottom: 16px;
+}
+
+:is(h1, h2, h3, h4) > a {
+	scroll-margin-top: 16px;
 }
 
 h2, h2 > a {
-    margin-top: 64px;
-    margin-bottom: 16px;
 	color:	var(--color-tertiary);
 }
-.nightMode h2 {
-	color:	var(--color-tertiary-night);
-}
 
-h3, h3 > a {
-    margin-top: 64px;
-    margin-bottom: 12px;
+h3, :is(h3, h4) > a {
 	color: var(--color-gray-900);
 }
 
-.nightMode h3 {
-	color: var(--color-gray-900-night);
-}
-
-a, .toclink, .techinside {
+a, .techinside {
     color: var(--color-link);
     text-decoration: none;
     font-weight: var(--font-weight-medium);
@@ -168,8 +159,14 @@ a:hover, .techoutside:hover, .techinside:hover {
     text-decoration: underline;
 }
 
+
+
+ul {
+	margin: 16px 0 16px 32px;
+}
+
 /* aside notes */
-.refcolumn {
+.aside {
     display: block;
     padding: 24px 32px;
     margin: 28px 0 36px;

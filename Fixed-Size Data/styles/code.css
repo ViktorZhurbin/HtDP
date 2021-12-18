@@ -100,7 +100,7 @@ span.RktValDef, span.RktStxDef, span.RktSymDef
 }
 
 
-.refcolumn .RktInBG {
+.aside .RktInBG {
   background-color: white;
 }
 
@@ -165,12 +165,6 @@ h2 .RktPn, h3 .RktPn, h4 .RktPn, h5 .RktPn {
     color: #333;
     font-size: 1.50rem;
     font-weight: 400;
-}
-
-.toptoclink .RktStxLink, .toclink .RktStxLink,
-.toptoclink .RktValLink, .toclink .RktValLink,
-.toptoclink .RktModLink, .toclink .RktModLink {
-    color: inherit;
 }
 
 .tocset .RktValLink, .tocset .RktStxLink, .tocset .RktModLink, .tocset .RktSym {
