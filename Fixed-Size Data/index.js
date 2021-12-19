@@ -7,3 +7,17 @@ const toggleMenu = () => {
 }
 
 window.onhashchange = toggleMenu;
+
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    const burger = document.querySelector(".burger");
+    const currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    burger.style.top = "var(--menu-indent)";
+  } else {
+    burger.style.top = "-50px";
+  }
+
+  prevScrollpos = currentScrollPos;
+}
