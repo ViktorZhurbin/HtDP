@@ -11,6 +11,7 @@
 
 	--color-white: hsl(0deg, 0%, 100%);
 
+	--color-bg: var(--color-white);
 	--color-bg-night: hsl(210deg, 30%, 8%);
 
 
@@ -52,7 +53,7 @@ body {
     text-align: left;
 	font-family: var(--font-family);
 	color: var(--color-text);
-	background-color: var(--color-white);
+	background-color: var(--color-bg);
 	margin: 0;
     -webkit-font-smoothing: antialiased;
 }
@@ -73,11 +74,10 @@ body {
 }
 
 .menu {
-	display: block;
     position: fixed;
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
 	left: var(--menu-indent);
-    top: var(--menu-indent);
+    top: 0;
     max-height: calc(100vh - var(--menu-indent));
     overflow: auto;
     padding-bottom: 16px;
@@ -89,6 +89,11 @@ body {
     align-items: center;
     justify-content: start;
     gap: 16px;
+	position: sticky;
+    top: 0;
+    padding-top: var(--menu-indent);
+    background-color: var(--color-bg);
+	z-index: 1;
 }
 
 .toc {
@@ -99,7 +104,7 @@ body {
 	display: block;
 	margin-top: 3px;
     opacity: 0.7;
-    color: var(--color-gray-800);
+    color: var(--color-gray-900);
 	font-size: 14px;
 	transition: opacity 500ms ease 0s;
 }
@@ -123,6 +128,16 @@ body {
 
 	flex: 1 1 var(--width);
     max-width: min(var(--width), 100%);
+}
+
+@media (min-width: 360px) {
+	.menu {
+		width: 100%;
+	}
+
+	.menu a {
+		font-size: 1.1rem;
+	}
 }
 
 p {
