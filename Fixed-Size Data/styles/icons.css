@@ -1,0 +1,63 @@
+.iconButton,
+.icon::before,
+.icon::after {
+  --hover-color: rgb(243, 246, 249);
+  --stroke-width: 1px;
+  --stroke-color: var(--color-gray-1000);
+  --icon-bg: var(--color-gray-1000);
+}
+
+.iconButton {
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.iconButton:hover {
+  background-color: var(--hover-color);
+}
+
+.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.burger {
+    position: fixed;
+    left: var(--menu-indent);
+    top: var(--menu-indent);
+}
+
+.iconBurger {
+    display: grid;
+    align-content: space-around;
+}
+
+.iconBurger > span {
+    display: block;
+    width: 100%;
+    height: var(--stroke-width);
+    background-color: var(--icon-bg);
+}
+
+.iconClose {
+    position: relative;
+  }
+
+.iconClose::before,
+.iconClose::after {
+    content: "";
+    position: absolute;
+    left: calc(var(--icon-size) / 2);
+    height: var(--icon-size);
+    width: var(--stroke-width);
+    background-color: var(--icon-bg);
+}
+
+.iconClose:before {
+    transform: rotate(45deg);
+}
+.iconClose:after {
+    transform: rotate(-45deg);
+}
+

@@ -1,7 +1,7 @@
 const toggleMenu = () => {
-    const toggle = document.querySelector(".toggle");
+    const burger = document.querySelector(".burger");
     const menu = document.querySelector(".menu");
 
     menu.classList.toggle("hidden");
-    toggle.classList.toggle("hidden");
+    burger.classList.toggle("hidden");
 }

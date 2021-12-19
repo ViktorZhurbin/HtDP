@@ -44,6 +44,8 @@
     --font-weight-light: 400;
     --font-family: Roboto, Arial, -apple-system, sans-serif;
     --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Fira Mono', 'Meslo LG S for Powerline', Inconsolata, 'Droid Sans Mono', monospace;
+
+	--icon-size: 24px;
 }
 
 body {
@@ -55,7 +57,13 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.hidden.hidden {
+	display: none;
+}
+
 .main {
+	--menu-indent: 16px;
+
     display: flex;
 	gap: 96px;
 	justify-content: center;
@@ -64,46 +72,30 @@ body {
     padding: 0 32px;
 }
 
-.toc {
-	--top: 48px;
-
-	display: none;
-    position: sticky;
-    top: var(--top);
-    max-height: calc(100vh - var(--top));
+.menu {
+	display: block;
+    position: fixed;
+    background-color: var(--color-white);
+	left: var(--menu-indent);
+    top: var(--menu-indent);
+    max-height: calc(100vh - var(--menu-indent));
     overflow: auto;
     padding-bottom: 16px;
 	width: 320px;
 }
 
-@media (min-width: 1024px) {
-	.main {
-		justify-content: flex-start;
-
-	}
-
-	.toc {
-		display: block;
-		justify-content: flex-start;
-    	align-items: flex-start;
-	}
-}
-
-.toc .header {
+.menuHeader {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
 }
 
-.menu {
-	width: 100%;
+.toc {
+	margin-left: calc(var(--icon-size) / 2);
 }
 
-.menu.hidden {
-	display: none;
-}
-
-.toc a {
+.menu a {
 	display: block;
 	margin-top: 3px;
     opacity: 0.7;
@@ -112,13 +104,13 @@ body {
 	transition: opacity 500ms ease 0s;
 }
 
-.toc a:hover {
+.menu a:hover {
 	text-decoration: none;
 	opacity: 1;
 	transition: opacity 0ms ease 0s;
 }
 
-.toc p {
+.menu p {
 	margin: 0;
 }
 

@@ -6,20 +6,27 @@
   <title>Fixed-Size Data</title>
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/code.css">
-  <link rel="stylesheet" href="styles/menu-toggle.css">
+  <link rel="stylesheet" href="styles/icons.css">
   <script src="index.js"></script>
 </head>
 
 <body id="scribble-racket-lang-org">
   <main class="main">
-    <aside class="toc">
-      <div class="header">
-        <span>TABLE OF CONTENTS</span>
-        <div class="toggle" onclick="toggleMenu()">
-          <span class="chevron" />
-        </div>
+    <div class="iconButton burger" onclick="toggleMenu()">
+      <div class="icon iconBurger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <table class="menu" cellspacing="0" cellpadding="0">
+    </div>
+    <aside class="menu hidden">
+      <div class="menuHeader">
+        <div class="iconButton close" onclick="toggleMenu()">
+          <div class="icon iconClose"></div>
+        </div>
+        <span>TABLE OF CONTENTS</span>
+      </div>
+      <table class="toc" cellspacing="0" cellpadding="0">
         <tbody>
           <tr>
             <td>
