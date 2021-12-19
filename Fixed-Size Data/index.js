@@ -5,3 +5,5 @@ const toggleMenu = () => {
     menu.classList.toggle("hidden");
     burger.classList.toggle("hidden");
 }
+
+window.onhashchange = toggleMenu;
