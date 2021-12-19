@@ -78,10 +78,9 @@ body {
     background-color: var(--color-bg);
 	left: var(--menu-indent);
     top: 0;
-    max-height: calc(100vh - var(--menu-indent));
+    max-height: 100vh;
     overflow: auto;
-    padding-bottom: 16px;
-	width: 320px;
+	width: 100%;
 }
 
 .menuHeader {
@@ -97,7 +96,7 @@ body {
 }
 
 .toc {
-	margin-left: calc(var(--icon-size) / 2);
+	margin: 12px calc(var(--icon-size) / 2);
 }
 
 .menu a {
@@ -130,11 +129,11 @@ body {
     max-width: min(var(--width), 100%);
 }
 
-@media (min-width: 360px) {
-	.menu {
-		width: 100%;
-	}
+.content > * {
+	content-visibility: auto;
+}
 
+@media (max-width: 764px) {
 	.menu a {
 		font-size: 1.1rem;
 	}
