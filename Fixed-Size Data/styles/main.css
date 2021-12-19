@@ -58,7 +58,7 @@ body {
 .main {
     display: flex;
 	gap: 96px;
-    justify-content: center;
+	justify-content: center;
 	position: relative;
     width: 100%;
     padding: 0 32px;
@@ -77,6 +77,11 @@ body {
 }
 
 @media (min-width: 1024px) {
+	.main {
+		justify-content: flex-start;
+
+	}
+
 	.toc {
 		display: block;
 		justify-content: flex-start;
