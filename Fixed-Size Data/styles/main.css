@@ -232,7 +232,7 @@ a:hover, .techoutside:hover, .techinside:hover {
 
 
 
-ul {
+ul, ol {
 	margin: 16px 0 16px 32px;
 }
 
