@@ -6,7 +6,14 @@ const toggleMenu = () => {
     burger.classList.toggle("hidden");
 }
 
-window.onhashchange = toggleMenu;
+window.onhashchange = () => {
+  const menu = document.querySelector(".menu");
+  const isMenuVisible = !menu.classList.contains("hidden");
+
+  if (isMenuVisible) {
+    toggleMenu();
+  }
+}
 
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
